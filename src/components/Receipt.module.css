@@ -1,0 +1,54 @@
+.ReceiptBody {
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(5px + 2vmin)
+}
+
+.ReceiptContextButton {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.ReceiptContextButton > div {
+    margin: 0.5vh;
+    padding: 0.75vh 1vh;
+    border: 1px solid black;
+    border-radius: 0.5vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+
+.Accept {
+    background-color: #baf5c1;
+}
+
+.Accept:hover {
+    background-color: #c3f7ca;
+}
+
+.Split {
+    background-color: #e2e697;
+}
+
+.Split:hover {
+    background-color: #edf0b1;
+}
+
+.WrongAmount {
+    background-color: #eb6e6a;
+}
+
+.WrongAmount:hover {
+    background-color: #f57976;
+}
+
+.Skip {
+    background-color: #c4c4c4;
+}
+
+.Skip:hover {
+    background-color: #ebebeb;
+}

@@ -1,4 +1,5 @@
 import { createStore } from "solid-js/store";
+import { useNavigate } from 'solid-start';
 
 // TODO: consolidate this definition with the backend so we don't forget to update stuff
 type Receipt = {
@@ -8,11 +9,7 @@ type Receipt = {
 }
 
 const useReceiptForm = () => {
-    const [receipts, setReceipts] = createStore<Receipt>({
-        name: "",
-        totalAmount: 0,
-        lineItems: []
-    });
+    const [receipts, setReceipts] = createStore<Receipt[]>([]);
 
     const populateReceiptStoreFromSubmission = async (event: Event) => {
         event.preventDefault();
@@ -23,11 +20,11 @@ const useReceiptForm = () => {
         const response: Response = await fetch("http://localhost:8000/upload_receipts", {
             method: "POST",
             body: formData
-        })
+        });
 
-        const responseJson = await response.json();
+        const responseJson: Receipt[] = await response.json();
+        setReceipts(responseJson);
         console.log(responseJson);
-        // TODO: set receipt store
     }
 
     return { receipts, populateReceiptStoreFromSubmission }

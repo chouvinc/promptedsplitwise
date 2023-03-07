@@ -1,0 +1,19 @@
+[
+    {
+        "lineItems": [
+            { "name": "Chicken Burrito", "amount": 8.79},
+            { "name": "Kid's Meal - Chicken Fingers", "amount": 4.99}
+        ],
+        "total": 18.70,
+        "tax": 4.92,
+        "name": "receipt_a"
+    },
+    {
+        "lineItems": [
+            { "name": "Fish Taco", "amount": 9.99}
+        ],
+        "total": 13.56,
+        "tax": 3.57,
+        "name": "receipt_b"
+    }
+]
