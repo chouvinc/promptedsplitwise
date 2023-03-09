@@ -1,10 +1,6 @@
-.ReceiptBody {
-    text-align: left;
-    justify-content: left;
-    align-items: left;
-    display: flex;
-    flex-direction: column;
-    font-size: calc(5px + 2vmin)
+
+.LineItemText {
+    color: gray;
 }
 
 .ReceiptContextButton {
@@ -27,6 +23,15 @@
 
 .Accept:hover {
     background-color: #c3f7ca;
+}
+
+.Accepted {
+    background-color: pink;
+    text-decoration: line-through;
+}
+
+.Accepted:hover {
+    background-color: red;
 }
 
 .Split {

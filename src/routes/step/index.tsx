@@ -1,11 +1,11 @@
 import { Component } from "solid-js";
-import Receipt from "~/components/Receipt";
+import ReceiptPage from "~/pages/ReceiptPage";
 
 const Step: Component = () => {
     return (
         <>
         <div>Hello world</div>
-        <Receipt></Receipt>
+        <ReceiptPage></ReceiptPage>
         </>
     )
 }
